@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="height: 800px;" >
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+            style="margin: 00px 550px;margin-top: 200px; height: 50px;" >
+            <input type="radio" class="btn-check" name="btnradio" id="off" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="off" onclick="clickme(1)">OFF</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="on" autocomplete="off" >
+            <label class="btn btn-outline-primary" for="on" onclick="clickme(2)" >ON</label>
+        </div>
+       <div class="bulb" style="margin-left:350px; margin-top: 0px;">
+         <img src="off1.png" alt="" id="offbulb" style=" height: 500px; width: 500px;" onmouseover="this.style.background='grey'">
+        <img src="on1.png" alt="" id="onbulb" style="display: none; height: 400px; width: 500px;"onmouseover="this.style.background='yellow'">
+       </div>
+    </div>
+    <script>
+        function clickme(selection) {
+            if (selection == 1) {
+                document.getElementById('offbulb').style.display = "block"
+                 document.getElementById('onbulb').style.display = "none"
+            }
+            if (selection == 2) {
+                document.getElementById('onbulb').style.display = "block"
+                document.getElementById('offbulb').style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>
